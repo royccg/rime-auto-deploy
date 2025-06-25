@@ -1,9 +1,91 @@
+# patch:
+#   "preset_color_schemes/+":
+#     wechat: {author: zsakvo, back_color: 0xFFFFFF, border_height: 0, border_width: 8, candidate_format: "%c %@ ", comment_text_color: 0x999999, corner_radius: 5, font_point: 16, hilited_candidate_back_color: 0x75B100, hilited_candidate_text_color: 0xFFFFFF, hilited_corner_radius: 5, horizontal: true, inline_preedit: true, label_font_point: 12, name: "微信键盘 / WeChat-keyboard", text_color: 0x424242}
+#     wechat_dark: {back_color: 0x2e2925, border_height: 0, border_width: 8, candidate_format: "%c %@ ", candidate_text_color: 0xe9e9ea, comment_text_color: 0x999999, corner_radius: 5, font_point: 16, hilited_candidate_back_color: 0x75B100, hilited_candidate_text_color: 0xFFFFFF, hilited_corner_radius: 5, horizontal: true, inline_preedit: true, label_color: 0x999999, label_font_point: 12, name: "微信键盘深色", text_color: 0x424242}
+#     wechat_light: {back_color: 0xFFFFFF, border_height: 0, border_width: 8, candidate_format: "%c %@ ", comment_text_color: 0x999999, corner_radius: 5, font_point: 16, hilited_candidate_back_color: 0x75B100, hilited_candidate_text_color: 0xFFFFFF, hilited_corner_radius: 5, horizontal: true, inline_preedit: true, label_font_point: 12, name: "微信键盘浅色", text_color: 0x424242}
+#   "style/color_scheme": wechat_light
+#   "style/comment_font_face": "LXGW WenKai"
+#   "style/font_face": "LXGW WenKai"
+#   "style/label_font_face": "LXGW WenKai"
+
 patch:
-  "preset_color_schemes/+":
-    wechat: {author: zsakvo, back_color: 0xFFFFFF, border_height: 0, border_width: 8, candidate_format: "%c %@ ", comment_text_color: 0x999999, corner_radius: 5, font_point: 16, hilited_candidate_back_color: 0x75B100, hilited_candidate_text_color: 0xFFFFFF, hilited_corner_radius: 5, horizontal: true, inline_preedit: true, label_font_point: 12, name: "微信键盘 / WeChat-keyboard", text_color: 0x424242}
-    wechat_dark: {back_color: 0x2e2925, border_height: 0, border_width: 8, candidate_format: "%c %@ ", candidate_text_color: 0xe9e9ea, comment_text_color: 0x999999, corner_radius: 5, font_point: 16, hilited_candidate_back_color: 0x75B100, hilited_candidate_text_color: 0xFFFFFF, hilited_corner_radius: 5, horizontal: true, inline_preedit: true, label_color: 0x999999, label_font_point: 12, name: "微信键盘深色", text_color: 0x424242}
-    wechat_light: {back_color: 0xFFFFFF, border_height: 0, border_width: 8, candidate_format: "%c %@ ", comment_text_color: 0x999999, corner_radius: 5, font_point: 16, hilited_candidate_back_color: 0x75B100, hilited_candidate_text_color: 0xFFFFFF, hilited_corner_radius: 5, horizontal: true, inline_preedit: true, label_font_point: 12, name: "微信键盘浅色", text_color: 0x424242}
-  "style/color_scheme": wechat_light
-  "style/comment_font_face": "LXGW WenKai"
-  "style/font_face": "LXGW WenKai"
-  "style/label_font_face": "LXGW WenKai"
+  style:
+    #color_scheme: ms_babyblue
+    #color_scheme: ms_blue
+    color_scheme: ms_wechatgreen
+    font_face: "LXGW WenKai"
+    comment_font_face: "LXGW WenKai"
+    label_font_face: "LXGW WenKai"
+    font_point: 15
+    horizontal: false
+    inline_preedit: true
+    label_font_point: 10
+    layout:
+      border: 2
+      round_corner: 5
+      margin_x: 0
+      margin_y: 0
+      hilite_padding: 15
+      hilite_spacing: 5
+      spacing: 0
+      candidate_spacing: 0
+  preset_color_schemes:
+    ms_babyblue:
+      name: "MS 宝宝蓝／MS BabyBlue"
+      author: 小码哥
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      back_color: 0xFFFFFF                    # 底色
+      hilited_candidate_back_color: 0xFFD8A6  # 选中底色
+      label_color: 0x3c3c3c                   # 序号颜色
+      hilited_label_color: 0x3c3c3c           # 序号颜色
+      hilited_candidate_label_color: 0x3c3c3c # 选中序号颜色
+      candidate_text_color: 0x3c3c3c          # 文字颜色
+      hilited_candidate_text_color: 0x000000  # 选中文字颜色
+      comment_text_color: 0x999999            # 注颜色
+      hilited_comment_text_color: 0xFFFFFF    # 选中注颜色
+      text_color: 0x424242                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xFFFFFF            # 选中拼音颜色 （inline_preedit: false）
+      candidate_back_color: 0xFFFFFF          # 候选项底色
+      # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+      hilited_back_color: 0xD75A00            # 选中拼音底色 （inline_preedit: false）
+      border_color: 0xeaeaea                  # 外边框颜色
+
+    ms_blue:
+      name: "MS 蓝色／MS Blue"
+      author: 小码哥
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      back_color: 0xFFFFFF                    # 底色
+      hilited_candidate_back_color: 0xD75A00  # 选中底色
+      label_color: 0x999999                   # 序号颜色
+      hilited_label_color: 0xFFFFFF           # 序号颜色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      candidate_text_color: 0x3c3c3c          # 文字颜色
+      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
+      comment_text_color: 0x999999            # 注颜色
+      hilited_comment_text_color: 0xFFFFFF    # 选中注颜色
+      text_color: 0x424242                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xFFFFFF            # 选中拼音颜色 （inline_preedit: false）
+      candidate_back_color: 0xFFFFFF          # 候选项底色
+      # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+      hilited_back_color: 0xD75A00            # 选中拼音底色 （inline_preedit: false）
+      border_color: 0xeaeaea                  # 外边框颜色
+
+    ms_wechatgreen:
+      name: "MS 微信绿／MS Wechat Green"
+      author: 小码哥
+      candidate_format: "%c\u2005%@\u2005" # 编号 %c 和候选词 %@ 前后的空间
+      back_color: 0xFFFFFF                    # 底色
+      hilited_candidate_back_color: 0x79af22  # 选中底色
+      label_color: 0x999999                   # 序号颜色
+      hilited_label_color: 0xFFFFFF           # 序号颜色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      candidate_text_color: 0x3c3c3c          # 文字颜色
+      hilited_candidate_text_color: 0xFFFFFF  # 选中文字颜色
+      comment_text_color: 0x999999            # 注颜色
+      hilited_comment_text_color: 0xFFFFFF    # 选中注颜色
+      text_color: 0x424242                    # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xFFFFFF            # 选中拼音颜色 （inline_preedit: false）
+      candidate_back_color: 0xFFFFFF          # 候选项底色
+      # preedit_back_color:                   # 拼音底色 （inline_preedit: false）
+      hilited_back_color: 0x79af22            # 选中拼音底色 （inline_preedit: false）
+      border_color: 0xeaeaea                  # 外边框颜色
